@@ -102,9 +102,9 @@ class RingQueue{
         
             };
     
+
     
-    
-        /**
+        /*
         class const_iterator{
          private:
             RingQueue* parent;
@@ -123,7 +123,7 @@ class RingQueue{
      */
     
     
-    
+
         // Friendship goes both ways here.
         friend class iterator;
         // friend class const_iterator;  // not implemented... yet.
@@ -226,13 +226,13 @@ class RingQueue{
     
         iterator end() {
         // Replace the line(s) below with your code.
-        return iterator(this,0);
+        return iterator(this,ring_size);
         }
     
         // Miscellaneous functions
         size_t size() const {
         // Replace the line(s) below with your code.
-        return 0;
+        return ring_size;
         }
     
         // Debugging functions
@@ -272,13 +272,13 @@ int main(){
     // implementation of RingQueue<ItemType,int>::end().
     // If the implementation is not correct, it might result in
     // an infinite loop.
-    /*
+    
      std::cout << "Queue via iterators: \n";
      for ( auto it = rq.begin() ; it != rq.end() ; ++it ) {
      std::cout << "Value: " << *it << ", address: " << &(*it) << '\n';
      }
      std::cout << '\n';
-     */
+    
     
     
     
@@ -289,7 +289,7 @@ int main(){
 
 
 
-/**
+/*
  +++++++++++++++++++++++++++++++++++++++++++++++
  The output of your program [once the missing
  code is added] should look more or less like
